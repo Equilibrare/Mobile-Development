@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="12dp"
+        tools:context=".UpdateNoteFragment">
+
+        <TextView
+            android:id="@+id/editNoteHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins"
+            android:text="Edit Note"
+            android:textColor="@color/blue_light"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editNoteTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editNoteHeading"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/blue_border"
+            android:fontFamily="@font/poppins"
+            android:gravity="center|start"
+            android:hint="Enter the title"
+            android:enabled="false"
+            android:maxLines="1"
+            android:padding="12dp"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/editNoteDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editNoteTitle"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/blue_border"
+            android:fontFamily="@font/poppins"
+            android:gravity="top"
+            android:enabled="false"
+            android:hint="Enter the description"
+            android:minHeight="300dp"
+            android:padding="12dp"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editNoteDesc"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/ButtonHasilAnalisis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/blue_border"
+                android:fontFamily="@font/poppins"
+                android:padding="12dp"
+                android:text="Anxiety Analysis Result"
+                android:textSize="20sp"
+                android:visibility="visible" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:indeterminateTint="@color/white"
+                android:indeterminateTintMode="src_in"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editNoteDesc"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/blue_border"
+            android:fontFamily="@font/poppins"
+            android:gravity="start|center"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/editNoteFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            android:contentDescription="editFab"
+            android:src="@drawable/ic_edit_note"
+            android:tintMode="@color/white" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/saveNoteFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            android:visibility="gone"
+            android:contentDescription="saveFab"
+            android:src="@drawable/baseline_done_24"
+            android:tintMode="@color/white" />
+
+    </RelativeLayout>
+</layout>
